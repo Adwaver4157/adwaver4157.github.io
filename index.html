@@ -23,17 +23,18 @@
     });
     }
     // vue.jsの設定関係
-    var app = new Vue({
-      el: '#app',
-      data: {
-        message: 'Hello Vue!'
+    const app = {
+      data() {
+        return {
+          message: 'Hello Vue!'
+        }
       },
       methods: {
         reverseMessage: function () {
           this.message = this.message.split('').reverse().join('')
         }
       }
-    });
+    }
     </script>
   </body>
 </html>
